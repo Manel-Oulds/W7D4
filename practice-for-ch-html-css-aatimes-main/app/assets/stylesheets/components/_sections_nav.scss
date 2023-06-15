@@ -1,0 +1,18 @@
+@use '../variables' as *;
+
+.sections-nav-list {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: 1px solid $light-gray;
+
+  li:not(:last-child):hover {
+    background-color: $light-gray;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
