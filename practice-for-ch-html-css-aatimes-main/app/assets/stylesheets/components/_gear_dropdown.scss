@@ -1,3 +1,47 @@
 // Use the gear_dropdown.png screenshot as a style guide
 
 @use '../variables' as *;
+
+#settings-button{
+    position: relative;
+    .editions{
+        text-transform: uppercase;
+    }
+    &:hover{
+        .gear-dropdown{
+            display: block;
+        }
+    }
+    .editions a:hover{
+        background-color: $light-gray;
+        text-decoration: none;
+    }
+    a{
+        display: block;
+        padding: 5px 3px;
+    }
+    .dropdown-subtitle{
+        display: block;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom:8px;
+    }
+    .help{
+        color: $blue;
+    }
+
+}
+.gear-dropdown{
+    position: absolute;
+    display: none;
+    background-color: white;
+    padding: 20px 10px;
+    color: $dark-gray;
+    z-index: 10;
+    right: 0;
+    top: 25px;
+    width: 150px;
+    border: 1px solid $light-gray;
+    box-shadow: -1px 4px 6px 1px rgba(0,0,0,0.09);
+}
+
