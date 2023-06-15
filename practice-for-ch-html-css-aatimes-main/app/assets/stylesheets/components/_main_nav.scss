@@ -1,46 +1,71 @@
 @use '../variables' as *;
 
 .main-nav {
-  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid $light-gray;
+  padding: 5px;
 }
 
 .left-nav > ul,
 .right-nav > ul {
-  
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
 }
 
 .left-nav {
 
   > ul {
     > li {
-      
+      background-color: white;
+      border: 1px solid white;
+      padding: 5px 10px;
+      border-radius: 2px;
     }
   }
 
   span {
-    
+    text-transform: uppercase;
+    margin-left: 5px;
   }
 }
 
 .right-nav  {
   > ul {
     > li {
-      
+      background-color: $light-blue;
+      border: 1px solid $light-blue;
+      color: white;
+      border-radius: 2px;
+      padding: 5px 10px;
+
+      button {
+        border-radius: 2px;
+        text-transform: uppercase;
+      }
     }
 
     > li:last-of-type {
-      
+      background-color: white;
+      border: none;
     }
   }
   
   i {
-    
+    color: black;
   }
+}
+
+.right-nav > ul > li:hover {
+  background-color: $darkest-blue;
+  border-color: $darkest-blue;
 }
 
 .left-nav > ul > li:hover,
 .right-nav > ul > li:last-of-type:hover {
-  
+  background-color: $light-gray;
 }
 
     
